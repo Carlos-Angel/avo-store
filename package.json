@@ -1,0 +1,26 @@
+{
+  "name": "avo-store",
+  "version": "1.0.0",
+  "description": "SPA creada con Next.js, React, Typescript y styled JSX.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Carlos-Angel/avo-store.git"
+  },
+  "keywords": [],
+  "author": "Carlos Alberto Angel Angel <c.a.a.a.503@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Carlos-Angel/avo-store/issues"
+  },
+  "homepage": "https://github.com/Carlos-Angel/avo-store#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "husky": "^7.0.2"
+  },
+  "dependencies": {}
+}
