@@ -4,7 +4,7 @@
   "description": "SPA creada con Next.js, React, Typescript y styled JSX.",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start"
   },
