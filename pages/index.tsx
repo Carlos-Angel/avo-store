@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import Layout from '@components/Layout';
+import KawaiiHeader from '@components/KawaiiHeader';
+import ProductList from '@components/ProductList/ProductList';
 
 const Home = () => {
   const [productList, setProductList] = useState<TProduct[]>([]);
@@ -12,12 +15,10 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Avocados</h1>
-      {productList.map((product) => (
-        <div key={product.id}>{product.name}</div>
-      ))}
-    </div>
+    <Layout>
+      <KawaiiHeader />
+      <ProductList products={productList} />
+    </Layout>
   );
 };
 
