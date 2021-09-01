@@ -24,6 +24,12 @@ const Home = ({ productList }: { productList: TProduct[] }) => {
         </Link>
       </section>
       <ProductList products={productList} />
+      <style jsx>{`
+        section {
+          text-align: center;
+          margin-bottom: 2rem;
+        }
+      `}</style>
     </Layout>
   );
 };
