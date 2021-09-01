@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import DB from '@database';
+import enablePublicAccess from '@cors';
 
 const getAvoById = async (
   request: NextApiRequest,
