@@ -1,22 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Layout from '@components/Layout';
 import KawaiiHeader from '@components/KawaiiHeader';
 import ProductList from '@components/ProductList/ProductList';
+import fetch from 'isomorphic-unfetch';
+import Link from 'next/link';
 
-const Home = () => {
-  const [productList, setProductList] = useState<TProduct[]>([]);
+export const getServerSideProps = async () => {
+  const response = await fetch('https://avo-store-three.vercel.app/api/avo');
+  const { data: productList }: TAPIAvoResponse = await response.json();
 
-  useEffect(() => {
-    window
-      .fetch('/api/avo')
-      .then((res) => res.json())
-      .then(({ data }) => setProductList(data))
-      .catch(() => setProductList([]));
-  }, []);
+  return {
+    props: { productList },
+  };
+};
 
+const Home = ({ productList }: { productList: TProduct[] }) => {
   return (
     <Layout>
       <KawaiiHeader />
+      <section>
+        <Link href='/yes-or-no'>
+          <a>¿Deberia comer un avo hoy?</a>
+        </Link>
+      </section>
       <ProductList products={productList} />
     </Layout>
   );
