@@ -5,7 +5,7 @@ import ProductList from '@components/ProductList/ProductList';
 import fetch from 'isomorphic-unfetch';
 import Link from 'next/link';
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const response = await fetch('https://avo-store-three.vercel.app/api/avo');
   const { data: productList }: TAPIAvoResponse = await response.json();
 
