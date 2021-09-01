@@ -10,7 +10,9 @@ type YesOrNoApiResponse = {
 };
 
 const fetchResult = async () => {
-  const res = await fetch('https://avo-store-three.vercel.app/api/yes-or-no');
+  const res = await fetch(
+    'https://avo-store-three.vercel.app/api/avo/yes-or-no',
+  );
   const { data }: YesOrNoApiResponse = await res.json();
 
   return data;
