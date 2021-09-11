@@ -4,9 +4,10 @@ import '../global.css';
 
 import CartProvider from '@store/Cart';
 
-export function reportWebVitals(metric) {
-  console.log(metric);
-}
+/**report web vital with next */
+// export function reportWebVitals(metric) {
+//   console.log(metric);
+// }
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
